@@ -6,12 +6,16 @@
     "name" : "MappingNewName",
     "links" : [
       {
-        "link" : "Cleanse -> Target",
+        "link" : "Source -> Cleanse",
+        "groupLink" : "DefaultGroup -> Input group:"
+      },
+      {
+        "link" : "RuleSpecification -> Target",
         "groupLink" : "MappletOutputTx_Output -> DefaultGroup"
       },
       {
-        "link" : "Source -> Cleanse",
-        "groupLink" : "DefaultGroup -> Input group:"
+        "link" : "Cleanse -> RuleSpecification",
+        "groupLink" : "MappletOutputTx_Output -> Input group:"
       }
     ],
     "transformations" : [
@@ -342,8 +346,80 @@
             }
           ]
         }
+      },
+      {
+        "createTime" : "2025-04-02T10:45:35.743Z",
+        "name" : "RuleSpecification",
+        "advancedProperties" : [
+          {
+            "name" : "version",
+            "value" : "R37"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "Input group:",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          },
+          {
+            "input" : "false",
+            "name" : "MappletOutputTx_Output",
+            "output" : "true"
+          }
+        ],
+        "documentId" : "@fNuUi36cpQkjYvoArgPcuK",
+        "ruleId" : "@fNuUi36cpQkjYvoArgPcuK",
+        "inputGroups" : [
+          {
+            "name" : "Input group:",
+            "fieldMappingMode" : "MANUAL",
+            "fieldMapping" : {
+              "fields" : [
+                {
+                  "name" : "Cleanse1_Cleansed",
+                  "precision" : 0,
+                  "scale" : 0,
+                  "txField" : {
+                    "name" : "NewInput1"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "inputFields" : {
+          "fieldList" : [
+            {
+              "name" : "NewInput1",
+              "platformType" : {
+                "name" : "string"
+              },
+              "precision" : 50,
+              "scale" : 0
+            }
+          ]
+        },
+        "outputFields" : {
+          "fieldList" : [
+            {
+              "name" : "PrimaryRuleSet",
+              "platformType" : {
+                "name" : "string"
+              },
+              "precision" : 100,
+              "scale" : 0
+            }
+          ]
+        }
       }
     ]
   },
-  "vcsExportTime" : "2025-04-02 03:44:05 PDT"
+  "vcsExportTime" : "2025-04-02 03:46:16 PDT"
 }
