@@ -3,7 +3,7 @@
     "allowMaxFieldLength" : "false",
     "bigIntConvertType" : "ONLY_BIGINT",
     "documentType" : "MAPPING",
-    "name" : "Mapping1",
+    "name" : "MappingNewName",
     "links" : [
       {
         "link" : "Cleanse -> Target",
@@ -345,5 +345,5 @@
       }
     ]
   },
-  "vcsExportTime" : "2025-04-02 03:40:06 PDT"
+  "vcsExportTime" : "2025-04-02 03:44:05 PDT"
 }
